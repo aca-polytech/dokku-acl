@@ -25,10 +25,6 @@ check_app() {
     dokku_log_fail "No such app: $app"
   fi
 
-  if [ -n "${NAME:-}" ];
-  then
-    dokku_log_fail "You can only modify ACL using local dokku command on target host"
-  fi
 }
 
 case "${1:-}" in
